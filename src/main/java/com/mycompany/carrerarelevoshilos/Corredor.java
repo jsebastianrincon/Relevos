@@ -37,6 +37,32 @@ public class Corredor extends Thread{
         }
     }
     
+        public int correr(int corre) {
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException ex) {
+            ex.getMessage();
+            System.out.println("Error en el Metodo Correr");
+        }
+        int numRam = Utilitaria.generaNumero();
+        if (corre == 1) {
+            equipo.setPosicion1(equipo.getPosicion1()+ numRam);
+            mostrarEquipo();
+            return equipo.getPosicion1();
+        }
+        if (corre == 2) {
+            equipo.setPosicion2(equipo.getPosicion2()+ numRam);
+            mostrarEquipo();
+            return equipo.getPosicion2();
+        }
+        if (corre == 3) {
+            equipo.setPosicion3(equipo.getPosicion3()+ numRam);
+            mostrarEquipo();
+            return equipo.getPosicion3();
+        }
+        return 0;
+    }
+     
     public void mostrarEquipo(){
         
         if(equipo.imprimirPuesto().contains("Equipo1")){
