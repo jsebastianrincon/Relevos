@@ -25,6 +25,24 @@ public class Corredor extends Thread{
         this.equipo = equipo;
     }
     
+    @Override
+    public void run(){
+        if(posiciondeInicio == 0){
+           avanzaCorredor1(); 
+        }else{
+            esperar();
+        }if(posiciondeInicio==30){
+           avanzaCorredor2();    
+        }else{
+            esperar();
+        }if(posiciondeInicio==60){
+            avanzaCorredor3();
+        }else{
+            esperar();
+        }
+    }
+    
+    
     public void avanzaCorredor1(){
         while (true) {
             int posicion = correr(1);
