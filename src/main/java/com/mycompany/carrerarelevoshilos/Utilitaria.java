@@ -11,4 +11,9 @@ package com.mycompany.carrerarelevoshilos;
  */
 public class Utilitaria {
     
+    public static int generaNumero(){
+        int numero = (int) (Math.random() * 3) + 1;
+        return numero;
+    }
+    
 }
