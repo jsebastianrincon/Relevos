@@ -25,6 +25,20 @@ public class Corredor extends Thread{
         this.equipo = equipo;
     }
     
+    public void avanzaCorredor1(){
+        while (true) {
+            int posicion = correr(1);
+            if (posicion >= 30) {
+                equipo.setPosicion1(30);
+                synchronized (equipo) {
+                    equipo.notifyAll();
+                    posiciondeInicio = 30;
+                }
+                break;
+            }
+        }
+    }
+    
     
      public void esperar(){       
         synchronized (equipo) {           
