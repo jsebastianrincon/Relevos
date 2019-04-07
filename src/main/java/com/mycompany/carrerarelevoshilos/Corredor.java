@@ -5,9 +5,6 @@
  */
 package com.mycompany.carrerarelevoshilos;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 /**
  *
  * @author SuperUs
@@ -29,8 +26,7 @@ public class Corredor extends Thread{
     }
     
     
-     public void esperar(){
-         
+     public void esperar(){       
         synchronized (equipo) {           
             try {
                 equipo.wait();
