@@ -33,11 +33,11 @@ public class Equipo {
         
         for (int i = 0; i <= 100; i++) {
             if (i == posicion1) {
-                puesto += "X";
+                puesto += "X!";
             } else if (i == posicion2) {
-                puesto += "O";
+                puesto += "O!";
             } else if (i == posicion3) {
-                puesto += "+";
+                puesto += "+!";
             } else {
                 puesto += "_";
             }

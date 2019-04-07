@@ -18,6 +18,7 @@ public class Corredor extends Thread{
     private String equipo2;
     private String equipo3;
     
+    
     public Corredor(String nombreEquipo, int posiciondeInicio, int posiciondeLlegada, Equipo equipo ){
         this.nombreEquipo = nombreEquipo;
         this.posiciondeInicio = posiciondeInicio;
@@ -70,7 +71,7 @@ public class Corredor extends Thread{
         }
     }
     
-    public void avanzaCorredor3(){
+    public String avanzaCorredor3(){
         while (true) {
             int posicion = correr(3);
             if (posicion >= 100) {
@@ -82,8 +83,11 @@ public class Corredor extends Thread{
                 }else if(equipo.getNombreEquipo().equals("Equipo3")){
                     equipo.setNombreEquipo("Equipo 3");
                 }
+                String cadena = "El " + equipo.getNombreEquipo()+" Gana la carrera !!!";
                 System.out.println("El " + equipo.getNombreEquipo()+" Gana la carrera !!!");
-                break;
+                Inicio ini = new Inicio();
+                ini.imprimeGanador(equipo.getNombreEquipo());
+                return cadena;
             }
         }
     }
