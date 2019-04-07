@@ -39,6 +39,18 @@ public class Corredor extends Thread{
         }
     }
     
+    public void avanzaCorredor2(){
+        while (true) {
+            int posicion = correr(2);
+            if (posicion >= 60) {
+                equipo.setPosicion2(60);
+                synchronized (equipo) {
+                    equipo.notify();
+                }
+                break;
+            }
+        }
+    }
     
      public void esperar(){       
         synchronized (equipo) {           
