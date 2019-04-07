@@ -5,6 +5,9 @@
  */
 package com.mycompany.carrerarelevoshilos;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author SuperUs
@@ -25,22 +28,35 @@ public class Corredor extends Thread{
         this.equipo = equipo;
     }
     
+    
+     public void esperar(){
+         
+        synchronized (equipo) {           
+            try {
+                equipo.wait();
+            } catch (InterruptedException ex) {
+                ex.getMessage();
+                System.out.println("Error en Metodo Esperar");
+            }
+        }
+    }
+    
     public void mostrarEquipo(){
         
         if(equipo.imprimirPuesto().contains("Equipo1")){
             equipo1 = equipo.imprimirPuesto();
                 if(equipo1 != null){
-                    system.out.println(equipo1);
+                    System.out.println(equipo1);
                 }
         }else if(equipo.imprimirPuesto().contains("Equipo2")){
             equipo2=equipo.imprimirPuesto();
                 if(equipo2 != null){
-                    system.out.println(equipo2);
+                    System.out.println(equipo2);
                 }
         }else if(equipo.imprimirPuesto().contains("Equipo3")){
             equipo3=equipo.imprimirPuesto();
                  if(equipo3 != null){
-                     system.out.println(equipo3);
+                     System.out.println(equipo3);
                    }
         }
         
