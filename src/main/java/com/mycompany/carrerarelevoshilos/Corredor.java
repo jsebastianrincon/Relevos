@@ -8,6 +8,7 @@ package com.mycompany.carrerarelevoshilos;
 /**
  *
  * @author SuperUs
+ * @author Juan Sebastian
  */
 public class Corredor extends Thread{
     Equipo equipo;
