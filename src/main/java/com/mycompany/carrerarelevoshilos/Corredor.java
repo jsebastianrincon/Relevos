@@ -9,6 +9,10 @@ package com.mycompany.carrerarelevoshilos;
  * Clase Corredor donde se declaran variables como el equipo del corredor su pocicion y su llegada
  * @author Edward Ramos - Sebastian Rincon
  */
+
+/* Creacion De Clase corredor donde se hara el manejo de la informacion del nombre del equipo, los dosto de los equipos y las variables
+para determinar las posiciones de llegada e inicio */
+
 public class Corredor extends Thread{
     Equipo equipo;
     private String nombreEquipo;
@@ -33,6 +37,7 @@ public class Corredor extends Thread{
     }
     
     @Override
+    /*Clase publica para hacer la logica de la carrera */
     public void run(){
         if(posiciondeInicio == 0){
            avanzaCorredor1(); 
