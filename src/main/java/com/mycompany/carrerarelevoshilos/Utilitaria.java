@@ -6,11 +6,17 @@
 package com.mycompany.carrerarelevoshilos;
 
 /**
- *
- * @author SuperUs
+ * Clase Utilitaria la cual genera un numero Ramdon que sera las pociciones que
+ * avanzen los corredores
+ * @author Edward Ramos - Sebastian Rincon
  */
+
 public class Utilitaria {
-    
+    /**
+     * El metodo generaNumero se encarga de generar un numero aleatorio 
+     * entre 1 y 3 
+     * @return numero ramdon
+     */
     public static int generaNumero(){
         int numero = (int) (Math.random() * 3) + 1;
         return numero;

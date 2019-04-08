@@ -6,17 +6,21 @@
 package com.mycompany.carrerarelevoshilos;
 
 /**
- *
- * @author SuperUs
+ * Clase Equipo en la cual se imprimen las posiciones de los corredores
+ * @author Edward Ramos - Sebastian Rincon
  */
 public class Equipo {
-    
     
     private String nombreEquipo;
     private int posicion;
     private int posicion1;
     private int posicion2;
     private int posicion3;
+    
+    /**
+     * 
+     * @param nombreEqui Variable que toma el nombre del equipo
+     */
     
     public Equipo(String nombreEqui) {
         this.nombreEquipo = nombreEqui;
@@ -25,10 +29,13 @@ public class Equipo {
         this.posicion3=60;
     }
     
-      
+     /**
+      * El metodo Imprimir puesto se encarga de la impresion de los corredores X O +
+      * @return la posicion de cada corredor X O +
+      */
+    
      public synchronized String imprimirPuesto(){
-        String puesto="";
-        
+        String puesto="";    
         puesto = "Equipo : " + nombreEquipo;
         
         for (int i = 0; i <= 100; i++) {

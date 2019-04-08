@@ -6,9 +6,10 @@
 package com.mycompany.carrerarelevoshilos;
 
 /**
- *
- * @author SuperUs
+ * Clase Inicio donde se declaran los equipos y sus corredores
+ * @author Edward Ramos - Sebastian Rincon
  */
+
 public class Inicio {
     
     private int cont;
@@ -26,6 +27,10 @@ public class Inicio {
     Corredor corredor32 = new Corredor("Corredor32", 30, 60, equi3);
     Corredor corredor33 = new Corredor("Corredor33", 60, 100, equi3);
     
+    /**
+     * El metodo carrera Inicia a los corredores
+     */
+    
     public void carrera(){
         corredor11.start();
         corredor12.start();
@@ -37,6 +42,12 @@ public class Inicio {
         corredor32.start();
         corredor33.start();
     }
+    
+   /**
+    * El metodo Imprime ganador se encarga de imprimmir la medalla y al equipo ganador
+    * @param equipo recibe el equipo que finalizo la carrera
+    */
+    
     public void imprimeGanador(String equipo){
         System.out.println("COnt :"+cont);
         if(cont != 1){
@@ -57,6 +68,7 @@ public class Inicio {
             System.out.println("        ********************");
             System.out.println("        ********************");
             cont = cont + 1;
+            System.exit(0);
         }
     }
 }

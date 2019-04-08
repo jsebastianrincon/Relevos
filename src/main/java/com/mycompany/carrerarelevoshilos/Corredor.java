@@ -6,8 +6,8 @@
 package com.mycompany.carrerarelevoshilos;
 
 /**
- *
- * @author SuperUs
+ * Clase Corredor donde se declaran variables como el equipo del corredor su pocicion y su llegada
+ * @author Edward Ramos - Sebastian Rincon
  */
 public class Corredor extends Thread{
     Equipo equipo;
@@ -18,7 +18,13 @@ public class Corredor extends Thread{
     private String equipo2;
     private String equipo3;
     
-    
+    /**
+     * 
+     * @param nombreEquipo variable del nombre del equipo
+     * @param posiciondeInicio variable que toma la posicion inicial del corredor
+     * @param posiciondeLlegada variable que toma la posicion final del corredor
+     * @param equipo obejeto de la clase equipo
+     */
     public Corredor(String nombreEquipo, int posiciondeInicio, int posiciondeLlegada, Equipo equipo ){
         this.nombreEquipo = nombreEquipo;
         this.posiciondeInicio = posiciondeInicio;
@@ -43,6 +49,9 @@ public class Corredor extends Thread{
         }
     }
     
+    /**
+     * el metodo avanzaCorredor1 inicia los primeros corredores de los equipo
+     */
     
     public void avanzaCorredor1(){
         while (true) {
@@ -58,6 +67,10 @@ public class Corredor extends Thread{
         }
     }
     
+     /**
+     * el metodo avanzaCorredor2 inicia los segundos corredores de los equipo
+     */
+    
     public void avanzaCorredor2(){
         while (true) {
             int posicion = correr(2);
@@ -70,6 +83,10 @@ public class Corredor extends Thread{
             }
         }
     }
+    
+     /**
+     * el metodo avanzaCorredor3 inicia los tereros corredores de los equipo
+     */
     
     public String avanzaCorredor3(){
         while (true) {
@@ -92,6 +109,10 @@ public class Corredor extends Thread{
         }
     }
     
+    /**
+     * El metodo esperar se encarga de que los hilos esperen 
+     */
+    
      public void esperar(){       
         synchronized (equipo) {           
             try {
@@ -103,6 +124,12 @@ public class Corredor extends Thread{
         }
     }
     
+     /**
+      * El metodo correr hace que los corredores avanzen
+      * @param corre variable de uno de los 3 atletas
+      * @return 
+      */
+     
         public int correr(int corre) {
         try {
             Thread.sleep(500);
@@ -129,6 +156,10 @@ public class Corredor extends Thread{
         return 0;
     }
      
+        /**
+         * El metodo mostrarEquipo muestra a que equipo pertenece el corredor
+         */
+        
     public void mostrarEquipo(){
         
         if(equipo.imprimirPuesto().contains("Equipo1")){
@@ -146,8 +177,8 @@ public class Corredor extends Thread{
                  if(equipo3 != null){
                      System.out.println(equipo3);
                    }
-        }
+             }
         
-    }
+      }
     
 }

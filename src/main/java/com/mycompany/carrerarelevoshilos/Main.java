@@ -6,14 +6,15 @@
 package com.mycompany.carrerarelevoshilos;
 
 /**
- *
- * @author SuperUs
+ * Clase Main del Programa
+ * @author Edward Ramos - Sebastian Rincon
  */
 public class Main {
 
     /**
      * @param args the command line arguments
      */
+    
     public static void main(String[] args) {
         // TODO code application logic here
         Inicio ini = new Inicio();
