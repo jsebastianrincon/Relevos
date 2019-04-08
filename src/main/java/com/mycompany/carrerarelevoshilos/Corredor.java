@@ -37,7 +37,6 @@ public class Corredor extends Thread{
     }
     
     @Override
-    /*Clase publica para hacer la logica de la carrera */
     public void run(){
         if(posiciondeInicio == 0){
            avanzaCorredor1(); 
