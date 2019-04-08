@@ -10,6 +10,10 @@ package com.mycompany.carrerarelevoshilos;
  * @author SuperUs
  * @author Juan Sebastian
  */
+
+/* Creacion De Clase corredor donde se hara el manejo de la informacion del nombre del equipo, los dosto de los equipos y las variables
+para determinar las posiciones de llegada e inicio */
+
 public class Corredor extends Thread{
     Equipo equipo;
     private String nombreEquipo;
@@ -19,6 +23,8 @@ public class Corredor extends Thread{
     private String equipo2;
     private String equipo3;
     
+    /* Clase corredor para manejar el nombre del equipo y las posciones de llegada e inicio ademas del equipo y la asignacion
+    de cada una de la variables */
     
     public Corredor(String nombreEquipo, int posiciondeInicio, int posiciondeLlegada, Equipo equipo ){
         this.nombreEquipo = nombreEquipo;
@@ -28,6 +34,7 @@ public class Corredor extends Thread{
     }
     
     @Override
+    /*Clase publica para hacer la logica de la carrera */
     public void run(){
         if(posiciondeInicio == 0){
            avanzaCorredor1(); 
@@ -44,7 +51,7 @@ public class Corredor extends Thread{
         }
     }
     
-    
+    /*Clase para hacer el avance de las posiciones del corredor 1 */
     public void avanzaCorredor1(){
         while (true) {
             int posicion = correr(1);
@@ -58,7 +65,7 @@ public class Corredor extends Thread{
             }
         }
     }
-    
+    /*Clase para hacer el avance de las posiciones del corredor 2 */
     public void avanzaCorredor2(){
         while (true) {
             int posicion = correr(2);
@@ -71,7 +78,7 @@ public class Corredor extends Thread{
             }
         }
     }
-    
+    /*Clase para hacer el avance de las posiciones del corredor 3 */
     public String avanzaCorredor3(){
         while (true) {
             int posicion = correr(3);
